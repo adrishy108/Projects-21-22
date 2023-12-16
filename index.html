@@ -1,93 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Dark Link Tree</title>
-    <style>
-        body {
-            background-color: hsl(220, 10%, 10%);
-            color: #fff;
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            transition: background-color 0.5s, color 0.5s;
-        }
 
-        #link-tree {
-            text-align: center;
-        }
+<!-- NOTE: i was laxy that so we did hover for discription; so if you are seeong this and have tome change it to manul click  -->
 
-        h1 {
-            color: hsl(270, 100%, 70%);
-            transition: color 0.5s;
-        }
 
-        a {
-            color: #fff;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Project of year 2021-22</title>
 
-        a:hover {
-            color: hsl(270, 100%, 80%);
-        }
+    <!---css link-->
 
-        #toggle {
-            cursor: pointer;
-            margin-top: 20px;
-            background-color: hsl(270, 100%, 50%);
-            color: #fff;
-            padding: 8px 16px;
-            border: none;
-            border-radius: 4px;
-            transition: background-color 0.3s, color 0.3s;
-        }
+    <link rel="stylesheet" href="./link-tree.css">
 
-        #toggle:hover {
-            background-color: hsl(270, 100%, 60%);
-        }
-    </style>
-</head>
-<body>
-    <div id="link-tree">
-        <h1>Your Name</h1>
-        <nav>
-            <a href="#">Link 1</a>
-            <a href="#">Link 2</a>
-            <a href="#">Link 3</a>
-            <!-- Add more links as needed -->
-        </nav>
-        <button id="toggle">Toggle Day/Night Mode</button>
-    </div>
+    <!-- javascript link -->
 
-    <script>
-        const body = document.body;
-        const h1 = document.querySelector('h1');
-        const links = document.querySelectorAll('a');
-        const toggleButton = document.getElementById('toggle');
+    <script src="link-tree.js" defer charset="utf-8"></script>
 
-        toggleButton.addEventListener('click', () => {
-            body.classList.toggle('night-mode');
-            const isNightMode = body.classList.contains('night-mode');
+    <!-- font -->
 
-            h1.style.color = isNightMode ? 'hsl(270, 100%, 70%)' : '#fff';
-            links.forEach(link => {
-                link.style.color = isNightMode ? '#fff' : 'hsl(270, 100%, 80%)';
-            });
-            toggleButton.style.backgroundColor = isNightMode ? 'hsl(270, 100%, 50%)' : 'hsl(270, 100%, 20%)';
-            toggleButton.style.color = isNightMode ? '#fff' : '#000';
-        });
-    </script>
-</body>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+   <!-- icon -->
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons"  rel="stylesheet">
+   <link href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined"  rel="stylesheet">
+
+
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+  </head>
+  <body>
+     <header class="poy2223-header">
+       <div class="main-logo id="mainLogo">Ayush</div>
+       <nav class="poy2223-main-nav">
+         <!---Change this toggle text with icon in main directory when you make connect that main-index css with it-->
+        <div class="theme-toggle"><span class="material-symbols-outlined">
+radio_button_partial
+</span></div>
+       </nav>
+     </header>
+
+     <div class="poy2223-container">
+       <ul class="poy2223-list">
+         <li class="projects-links driti">
+           <a href="#">Driti</a>
+           <div class="Description">
+             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+           </div>
+         </li>
+         <li class="projects-links hello">
+           <a href="#">hello</a>
+           <div class="Description">
+             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+           </div>
+         </li>
+       </ul>
+     </div>
+
+     <div class="main-footer">
+
+     </div>
+  </body>
 </html>
-
-
-      
-
-        
-
