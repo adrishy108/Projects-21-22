@@ -1,0 +1,127 @@
+:root{
+  --padding-small: 10px;
+  --padding-medium: 20px;
+  --padding-large: 50px;
+
+  --margin-small: 10px;
+  --margin-medium: 20px;
+  --margin-large: 50px;
+
+  --primary-clr: hsl(0, 0%, 10%);
+  --white-clr: hsl(100, 100%, 100%);
+  --secondary-clr: hsl(262, 92%,55%);
+  --tertiary-clr: hsl(0, 0%, 50%);
+  --border-clr: hsl(262, 92%,55%);
+
+  --fs-xs: 0.6em; /* Font size super small */
+  --fs-s: 0.8em;  /* Font size small */
+  --fs-n: 1em;  /* Font size small */
+  --fs-m: 1.2em;  /* Font size medium */
+  --fs-xl: 2em;   /* Font size super large */
+
+}
+
+/* NOTE: this root is temporay change it when make main design  and theme for github  */
+
+*{
+  padding: 0;
+  margin:0;
+}
+body{
+  background-color: var(--primary-clr);
+  color: var(--white-clr);
+  font-family: 'Space Mono', monospace;
+}
+
+.night-mode body{
+  background-color: var(--white-clr);
+  color: var(--primary-clr);
+  border-bottom: 1px solid var(--white-clr);
+}
+.night-mode .poy2223-header{
+  border-bottom: 1px solid var(--primary-clr);
+}
+
+.poy2223-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding:var(--padding-medium);
+  border-bottom: 1px solid var(--white-clr);
+}
+
+.poy2223-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--padding-large);
+}
+
+.poy2223-container ul{
+  flex-grow: 1;
+  text-align:center;
+  padding: 0 var(--padding-large);
+  max-width: 500px;
+}
+
+ .poy2223-container ul li{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  margin: var(--margin-small) 0;
+}
+
+.poy2223-container ul li a{
+  text-decoration: none;
+  font-weight: 500;
+  width: 100%;
+  color: var(--secondary-clr);
+  border: 1px solid var(--secondary-clr);
+  border-radius: 7.5px;
+  padding:var(--padding-small) 0;
+  transition: 0.3s ease;
+}
+.poy2223-container ul li .Description{
+  margin: 20px;
+  max-height: 0;
+  opacity: 0;
+  font-size: var(--fs-s);
+}
+
+ .poy2223-container ul li:hover{
+}
+.poy2223-container ul a:hover{
+  color: var(--white-clr);
+  background: var(--secondary-clr)
+}
+
+.poy2223-container ul a:hover + .Description {
+  max-height: 100%;
+  opacity: 1;
+}
+
+
+
+/* Default styles for all screen sizes */
+
+/* Media query for screens 600 pixels wide and above */
+@media screen and (min-width: 600px) {
+
+}
+
+/* Media query for screens 768 pixels wide and above */
+@media screen and (min-width: 768px) {
+  /* Styles for screens 768px and above */
+}
+
+/* Media query for screens 1024 pixels wide and above */
+@media screen and (min-width: 1024px) {
+  body{
+    margin: 0 auto;
+    max-width: 1480px;
+  }
+
+  div{
+    font-size: clamp(1.2em, 2.5vw, 1.5em); /* Adjust the range for larger screens */
+  }
+}
