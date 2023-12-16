@@ -3,66 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Dark Mode Index Page</title>
+    <title>Your Dark Link Tree</title>
     <style>
         body {
+            background-color: hsl(220, 10%, 10%);
+            color: #fff;
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #111;
-            color: #fff;
             display: flex;
             align-items: center;
             justify-content: center;
             height: 100vh;
-            overflow: hidden;
+            transition: background-color 0.5s, color 0.5s;
         }
 
-        #container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+        #link-tree {
+            text-align: center;
         }
 
         h1 {
-            font-size: 2em;
-            margin-bottom: 10px;
+            color: hsl(270, 100%, 70%);
+            transition: color 0.5s;
         }
 
         a {
-            color: #3498db;
+            color: #fff;
             text-decoration: none;
-            transition: color 0.3s ease-in-out;
+            transition: color 0.3s;
         }
 
         a:hover {
-            color: #2980b9;
+            color: hsl(270, 100%, 80%);
         }
 
-        .icon {
-            font-size: 2em;
-            margin: 10px;
-            transition: transform 0.3s ease-in-out;
+        #toggle {
+            cursor: pointer;
+            margin-top: 20px;
+            background-color: hsl(270, 100%, 50%);
+            color: #fff;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            transition: background-color 0.3s, color 0.3s;
         }
 
-        .icon:hover {
-            transform: scale(1.2);
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-            .icon, a:hover {
-                transition: none;
-            }
+        #toggle:hover {
+            background-color: hsl(270, 100%, 60%);
         }
     </style>
 </head>
 <body>
-    <div id="container">
+    <div id="link-tree">
         <h1>Your Name</h1>
-        <a href="#" class="icon">📷</a>
-        <a href="#" class="icon">📧</a>
-        <a href="#" class="icon">🌐</a>
-        <!-- Add more links or icons as needed -->
+        <nav>
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+            <!-- Add more links as needed -->
+        </nav>
+        <button id="toggle">Toggle Day/Night Mode</button>
     </div>
+
+    <script>
+        const body = document.body;
+        const h1 = document.querySelector('h1');
+        const links = document.querySelectorAll('a');
+        const toggleButton = document.getElementById('toggle');
+
+        toggleButton.addEventListener('click', () => {
+            body.classList.toggle('night-mode');
+            const isNightMode = body.classList.contains('night-mode');
+
+            h1.style.color = isNightMode ? 'hsl(270, 100%, 70%)' : '#fff';
+            links.forEach(link => {
+                link.style.color = isNightMode ? '#fff' : 'hsl(270, 100%, 80%)';
+            });
+            toggleButton.style.backgroundColor = isNightMode ? 'hsl(270, 100%, 50%)' : 'hsl(270, 100%, 20%)';
+            toggleButton.style.color = isNightMode ? '#fff' : '#000';
+        });
+    </script>
 </body>
 </html>
+
+
+      
+
+        
+
