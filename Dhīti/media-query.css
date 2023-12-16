@@ -1,0 +1,131 @@
+
+
+
+
+
+@media screen and (max-width:700px) {
+    html{
+        scroll-snap-type: none;
+    }
+    
+    section{
+        height: auto;
+    }
+    .header{
+        z-index: ;
+    }
+
+    .nav{
+        position: relative;
+        display: inline-block;
+        z-index: 99;
+        
+    }
+    .nav .icon{
+        display: block;
+        font-size: 2.5rem;
+    }
+
+    .links{
+        display:none ;
+        flex-direction: column;
+        position: absolute;
+        min-width: 160px;
+        padding: 0;
+        z-index: 9999;
+        box-shadow:
+        0 7px 30px -10px rgba(150,170,180,0.5);
+    }
+    link li{
+        padding: none;
+        margin: none;
+    }
+    .nav:hover .links{
+        display: inline-flex;
+        width: 200px;
+        right: 0;
+        background-color: rgb(227, 227, 227);
+    }
+    
+    .page-content{
+        grid-template-columns: 1fr;
+        margin-top: 1rem;
+    }
+
+
+
+    .content{
+        grid-row: 2;
+        display: grid;
+
+        margin-top: 2rem;
+    }
+    
+    .title{
+        font-size: 2rem;
+    }
+    .subtitle{
+        font-size: 1.5rem;
+    }
+
+    .paragraph{
+        max-width:500px        
+    }
+
+    .container{
+        background-color: red;
+        z-index: -999;
+    }
+    .img0{
+        width: 100%;
+        object-position: center;
+    }
+
+    .yoga{
+        margin-top: 3rem;
+    }
+
+    .yoga-title{
+        font-size: 3rem;
+        padding-bottom: 2rem;
+    }
+
+    .divine{
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr;
+        background-color: rgb(227, 227, 227);
+    }
+    .divine-content{
+        grid-row: 2;
+        height: auto
+    }
+
+    .divine-title{
+        font-size: 3rem;
+        padding: 3rem 0;
+    }
+
+    .gap-between-p{
+        margin-bottom: 2rem;
+    }
+
+    .health{
+
+    }
+    .health-title{
+        font-size: 3rem;
+    }
+    .h-container{
+        display: grid;
+        grid-template-columns: 1fr;
+        padding-bottom: 5rem;
+    }
+
+    .small{
+        width: auto;
+    }
+
+
+
+
+}
